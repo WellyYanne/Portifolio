@@ -1,0 +1,327 @@
+/* Estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to bottom right, #f3f3f3, #e0e0e0); /* Gradiente de fundo */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #333; /* Cor do texto */
+}
+
+h2 {
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Layout flex para a seção inicial */
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 95vh; /* Preenche a altura da tela */
+}
+
+.image-container {
+    flex: 1; /* Menor espaço para a imagem */
+    padding: 10px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    max-width: 50%; /* A largura da imagem é limitada a 50% */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+.text-container {
+    flex: 2; /* Maior espaço para o texto */
+    padding-left: 40px;
+}
+
+.text-container h1 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.text-container h2 {
+    font-size: 1.8rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.text-container p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #444;
+}
+
+/* Estilos para as seções */
+section {
+    padding: 30px 0; /* Diminuído o padding de 60px para 30px */
+    background-color: #fff;
+    margin-bottom: 10px; /* Diminuído o margin-bottom de 20px para 10px */
+    border-radius: 6px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra nas seções */
+}
+
+/* Estilos gerais para listas */
+ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+ul li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Projects section */
+.project {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 10px; /* Diminuído o margin-bottom de 20px para 10px */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact section */
+#contact ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+#contact ul li a:hover {
+    color: #007BFF;
+}
+
+/* Botão "Voltar ao Topo" */
+#btnTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#btnTop:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Estilos do menu */
+.navbar {
+    background-color: #020202;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #5e31d9;
+    color: #ffffff;
+    border-radius: 5%;
+}
+
+/* Estilo responsivo */
+@media screen and (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-container,
+    .text-container {
+        max-width: 100%;
+    }
+
+    .text-container {
+        padding-left: 0;
+    }
+
+    .navbar {
+        text-align: center;
+    }
+
+    .navbar a {
+        float: none;
+        display: inline-block;
+        width: 100%;
+    }
+}
+
+/* Estilos para a seção de habilidades */
+.skill-category {
+    margin-bottom: 30px; /* Espaçamento entre categorias */
+}
+
+.skill-category h3 {
+    font-size: 1.5rem; /* Tamanho do título */
+    color: #333; /* Cor do texto */
+    margin-bottom: 10px; /* Espaço abaixo do título */
+    justify-content: center;
+}
+
+/* Skills section */
+.skill-list {
+    display: flex; /* Usa flexbox para alinhar os itens lado a lado */
+    justify-content: center; /* Centraliza os itens */
+    flex-wrap: wrap; /* Permite que os itens quebrem em linha se não houver espaço */
+}
+
+.skill-item {
+    background-color: #f0f0f0; /* Cor de fundo dos itens */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 10px 20px; /* Espaçamento interno */
+    margin: 5px; /* Espaçamento entre os itens */
+    font-size: 1.2rem; /* Tamanho do texto */
+    transition: background-color 0.3s; /* Transição para hover */
+}
+
+.skill-item:hover {
+    background-color: #e0e0e0; /* Muda a cor ao passar o mouse */
+}
+
+/* Estilos de certificação */
+.certification-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.certification-item {
+    background-color: #f2f2f2; /* Fundo claro para destaque */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+    margin: 10px; /* Espaçamento entre as certificações */
+    padding: 15px; /* Espaçamento interno */
+    width: calc(25% - 20px); /* Largura responsiva */
+    text-align: center; /* Centralizar o texto */
+}
+
+.certification-item h4 {
+    color: #007BFF; /* Cor do título */
+    margin-bottom: 5px; /* Espaçamento abaixo do título */
+}
+
+.certification-item p {
+    color: #555; /* Cor do texto descritivo */
+    font-size: 0.9rem; /* Tamanho do texto */
+}
+
+ h3 {
+    border-bottom: 2px solid #212427; /* Cor da linha */
+    padding-bottom: 10px; /* Espaçamento entre o texto e a linha */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+form button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espaçamento entre os itens */
+}
+
+.social-item {
+    display: flex;
+    align-items: center;
+}
+
+.social-item img {
+    margin-right: 10px; /* Espaço entre o ícone e o texto */
+}
+
+.social-item a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+}
+
+.social-item a:hover {
+    color: #007BFF; /* Cor ao passar o mouse */
+}
+
